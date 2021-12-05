@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "250644341574",
+    "firebase_url": "https://joyboy-website-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "joyboy-website",
+    "storage_bucket": "joyboy-website.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:250644341574:android:7c60deba9cffbbc39cbb47",
+        "android_client_info": {
+          "package_name": "com.example.name"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "250644341574-fvlssh4f3eebsnpes2g3vnr2l0m6p74r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdoQQ4NzqeZXELTqCMign0edWDRCaYKFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "250644341574-fvlssh4f3eebsnpes2g3vnr2l0m6p74r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
