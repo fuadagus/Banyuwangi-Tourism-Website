@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:joyboy/screens/main/main_screen.dart';
 
-
 import 'constants.dart';
 
 void main() {

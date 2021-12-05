@@ -2,24 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+
 // ignore: must_be_immutable
 class DetailPage extends StatefulWidget {
   String title;
   String image;
   String description;
   String location;
-  DetailPage({this.title,this.description,this.image,this.location,});
+  DetailPage({
+    this.title,
+    this.description,
+    this.image,
+    this.location,
+  });
   @override
   _DetailPageState createState() => _DetailPageState();
 }
 
 class _DetailPageState extends State<DetailPage> {
   @override
-  
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      floatingActionButton: FloatingActionButton(onPressed: (){Get.back();}, child: Icon(Icons.arrow_back_ios_new_sharp,),elevation: 20.00,),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Get.back();
+        },
+        child: Icon(
+          Icons.arrow_back_ios_new_sharp,
+        ),
+        elevation: 20.00,
+      ),
       body: getBody(),
     );
   }
@@ -34,7 +47,11 @@ class _DetailPageState extends State<DetailPage> {
             height: size.height * 0.5,
             decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("/images/banner.jpg",),
+                  image: NetworkImage(widget.image)
+                  // AssetImage(
+                  //   "/images/banner.jpg",
+                  // ),
+                  ,
                   fit: BoxFit.cover),
             ),
             child: SafeArea(
@@ -46,17 +63,19 @@ class _DetailPageState extends State<DetailPage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     InkWell(
-                      onTap: (){
-                        Navigator.pop(context);
-                      },
-                      child: SvgPicture.asset("assets/images/back_icon.svg")),
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: Icon(Icons.arrow_back_ios_new_outlined)
+                        //  SvgPicture.asset("assets/images/back_icon.svg")
+                        ),
                     Row(
                       children: <Widget>[
-                        SvgPicture.asset("assets/images/heart_icon.svg"),
+                        // SvgPicture.asset("assets/images/heart_icon.svg"),
                         SizedBox(
                           width: 20,
                         ),
-                        SvgPicture.asset("assets/images/share_icon.svg"),
+                        // SvgPicture.asset("assets/images/share_icon.svg"),
                       ],
                     )
                   ],
@@ -74,7 +93,6 @@ class _DetailPageState extends State<DetailPage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  
                   Align(
                     child: Container(
                       width: 150,
@@ -96,7 +114,6 @@ class _DetailPageState extends State<DetailPage> {
                   ),
                   Row(
                     children: <Widget>[
-                      
                       SizedBox(
                         width: 20,
                       ),
@@ -119,17 +136,26 @@ class _DetailPageState extends State<DetailPage> {
                       )
                     ],
                   ),
-                  SizedBox(height: 20,),
-                  
-                  SizedBox(height: 20,),
-                  Text(widget.description,style: TextStyle(
-                    height: 1.6
-                  ),),
-                  SizedBox(height: 20,),
-                  Text("Gallery",style: TextStyle(
-                    fontSize: 18
-                  ),),
-                  SizedBox(height: 20,),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    widget.description,
+                    style: TextStyle(height: 1.6),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Text(
+                    "Gallery",
+                    style: TextStyle(fontSize: 18),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   Image(image: NetworkImage(widget.image)),
                 ],
               ),
