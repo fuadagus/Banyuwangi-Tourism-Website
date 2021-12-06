@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-class WebViewLoad extends StatefulWidget {
+class WebViewLoad extends StatelessWidget {
   const WebViewLoad({key}) : super(key: key);
 
-  @override
-  _WebViewLoadState createState() => _WebViewLoadState();
-}
-
-class _WebViewLoadState extends State<WebViewLoad> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
